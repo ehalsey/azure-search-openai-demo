@@ -1,16 +1,19 @@
 import { Outlet, NavLink, Link } from "react-router-dom";
 
 import github from "../../assets/github.svg";
+import ncLogo from "../../assets/Logo.png";
 
 import styles from "./Layout.module.css";
 
 const Layout = () => {
+    console.log(ncLogo, github);
     return (
         <div className={styles.layout}>
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
+                    <img src={ncLogo} className={styles.headerLogo}></img>
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>GPT + Enterprise data | Sample</h3>
+                        <h3 className={styles.headerTitle}>GPT + Enterprise data</h3>
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>

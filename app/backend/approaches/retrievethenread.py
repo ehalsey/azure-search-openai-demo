@@ -10,25 +10,25 @@ from text import nonewlines
 class RetrieveThenReadApproach(Approach):
 
     template = \
-"You are an intelligent assistant helping Contoso Inc employees with their healthcare plan questions and employee handbook questions. " + \
-"Use 'you' to refer to the individual asking the questions even if they ask with 'I'. " + \
-"Answer the following question using only the data provided in the sources below. " + \
+"You are a Microsoft Solution Architect who is an expert in Intelligent Document Processing helping NathCorp employees respond to a request for proposal. " \
+"Answer the question first using the data provided in the information sources below. If an answer cannot be found in the data provided you can use other sources." \
 "For tabular information return it as an html table. Do not return markdown format. "  + \
 "Each source has a name followed by colon and the actual information, always include the source name for each fact you use in the response. " + \
-"If you cannot answer using the sources below, say you don't know. " + \
+"If you cannot answer, say you don't know. " + \
+"Company names other than NathCorp should be replaced with 'client'. " + \
 """
 
 ###
-Question: 'What is the deductible for the employee plan for a visit to Overlake in Bellevue?'
+Question: 'How does the proposed solution help automate content discovery and categorization within an organization?'
 
 Sources:
-info1.txt: deductibles depend on whether you are in-network or out-of-network. In-network deductibles are $500 for employee and $1000 for family. Out-of-network deductibles are $1000 for employee and $2000 for family.
-info2.pdf: Overlake is in-network for the employee plan.
-info3.pdf: Overlake is the name of the area that includes a park and ride near Bellevue.
-info4.pdf: In-network institutions include Overlake, Swedish and others in the region
+info1.txt: The proposed solution uses Microsoft Syntex to automate content discovery and categorization.
+info2.pdf: Microsoft AI Builder can auto-classify and auto-categorize documents.
+info3.pdf: Azure Cognitive Services will be used automate content discovery and categorization.
+info4.pdf: Microsoft Syntex uses AI to automatically classify, extract, and process information from documents, reducing the need for manual data entry.
 
 Answer:
-In-network deductibles are $500 for employee and $1000 for family [info1.txt] and Overlake is in-network for the employee plan [info2.pdf][info4.pdf].
+The proposed solution leverages SharePoint Online, Microsoft Syntex[info1.txt], and Azure Cognitive Services[info4.txt] to automate content discovery and categorization. SharePoint Online serves as the backbone for document management, providing a platform to store, share, and collaborate on content. Microsoft Syntex uses AI to automatically classify, extract, and process information from documents, reducing the need for manual data entry. Azure Cognitive Services and Azure Cognitive Search enable advanced search capabilities, using AI to understand natural language queries and surface relevant content. Together, these technologies provide a comprehensive, automated system for content discovery and categorization within an organization[info3.txt].
 
 ###
 Question: '{q}'?
